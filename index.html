@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão AgroSustentável - Agrinho 2026</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #eef7ee; text-align: center; padding: 20px; }
+        .container { background: white; max-width: 600px; margin: auto; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); }
+        button { background-color: #2e7d32; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer; margin: 10px; }
+        button:hover { background-color: #1b5e20; }
+        .status { font-weight: bold; color: #2e7d32; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Missão AgroSustentável 🌾</h1>
+    <p>Você é o gerente de uma grande fazenda no Paraná. Tomando decisões certas, equilibre o lucro com a preservação do meio ambiente!</p>
+    
+    <hr>
+    
+    <p id="pergunta"><strong>Fase 1:</strong> Você precisa aumentar a produção de grãos nesta safra. O que você faz?</p>
+    
+    <button onclick="escolha('desmatar')">Desmatar um pedaço de Mata Atlântica</button>
+    <button onclick="escolha('tecnologia')">Investir em Tecnologia de Precisão</button>
+    
+    <p class="status" id="resultado"></p>
+</div>
+
+<script>
+    function escolha(opcao) {
+        let resultadoText = document.getElementById("resultado");
+        if (opcao === 'desmatar') {
+            resultadoText.innerHTML = "❌ Seu lucro subiu rápido, mas a fiscalização te multou e a água da região secou. Fim de jogo para o ambiente!";
+            resultadoText.style.color = "red";
+        } else if (opcao === 'tecnologia') {
+            resultadoText.innerHTML = "✅ Boa! Você gastou um pouco mais no início, mas produziu o dobro na mesma terra e protegeu a natureza. Nota 10 em Sustentabilidade!";
+            resultadoText.style.color = "green";
+        }
+    }
+</script>
+
+</body>
+</html>
